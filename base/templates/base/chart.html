@@ -34,22 +34,22 @@
         })
             .then(response => response.json())
             .then(data => {
-                renderChart(data.backend, data.frontend, data.fullstack)
+                renderChart(data.seo_content, data.content_writer, data.copywriter)
             });
     }
 
     loadData()
 
-    let renderChart = (backend, frontend, fullstack) => {
+    let renderChart = (seo_content, content_writer, copywriter) => {
         Highcharts.chart('container', {
             chart: {
                 type: 'column'
             },
             title: {
-                text: 'Developer Types'
+                text: 'Writing Types'
             },
             subtitle: {
-                text: 'Dennis Ivys Stream'
+                text: 'Joe SEO Content'
             },
 
             yAxis: {
@@ -66,16 +66,16 @@
                 }
             },
             series: [{
-                name: 'Backend Dev',
-                data: [backend]
+                name: 'Seo Content Writing',
+                data: [seo_content]
 
             }, {
-                name: 'Frontend Dev',
-                data: [frontend]
+                name: 'Content Writing',
+                data: [content_writer]
 
             }, {
-                name: 'FullStack Dev',
-                data: [fullstack]
+                name: 'Copywriting',
+                data: [copywriter]
 
             }]
         });

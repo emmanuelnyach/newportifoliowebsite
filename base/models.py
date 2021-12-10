@@ -8,9 +8,9 @@ from ckeditor_uploader.fields import RichTextUploadingField
 class Question(models.Model):
 
     TYPES = (
-        ('backend', 'backend'),
-        ('frontend', 'frontend'),
-        ('fullstack', 'fullstack'),
+        ('seo_content', 'seo_content'),
+        ('content_writer', 'content_writer'),
+        ('copywriter', 'copywriter'),
     )
 
     answer = models.CharField(max_length=200, choices=TYPES)

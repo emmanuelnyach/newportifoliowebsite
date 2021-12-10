@@ -11,9 +11,9 @@ from .serializers import QuestionSerializer
 def votingData(request):
     questions = Question.objects.all()
 
-    backend = Question.objects.filter(answer='backend').count()
-    frontend = Question.objects.filter(answer='frontend').count()
-    fullstack = Question.objects.filter(answer='fullstack').count()
+    seo_content = Question.objects.filter(answer='seo_content').count()
+    content_writer = Question.objects.filter(answer='content_writer').count()
+    copywriter = Question.objects.filter(answer='copywriter').count()
     #serializer = QuestionSerializer(questions, many=True)
 
-    return Response({'backend': backend, 'frontend': frontend, 'fullstack': fullstack})
+    return Response({'seo_content': seo_content, 'content_writer': content_writer, 'copywriter': copywriter})
