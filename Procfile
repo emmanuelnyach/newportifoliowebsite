@@ -1,1 +1,1 @@
-web: gunicorn joskeySEO.wsgi --log-file - 
+web: gunicorn joskeySEO.wsgi 
